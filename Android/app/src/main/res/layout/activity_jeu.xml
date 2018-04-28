@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="loic.brickbreaker.Jeu"
+    android:id="@+id/constrainLayout">
+
+
+    <TextView
+        android:id="@+id/scoreLabel"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/score"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/health"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/health"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/scoreLabel"
+        />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="68dp"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:onClick="pause"
+            android:text="@string/pause" />
+
+        <ImageView
+            android:id="@+id/paddle"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="500dp"
+            android:src="@drawable/paddle" />
+
+        <ImageView
+            android:id="@+id/balle"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="300dp"
+            android:src="@drawable/balle" />
+
+        <FrameLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/pauseLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/pause"
+                android:textSize="30sp"/>
+
+            <Button
+                android:id="@+id/quit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="35sp"
+                android:text="@string/quit"
+                android:onClick="quit"
+                />
+
+            <Button
+                android:id="@+id/son"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:onClick="Son"
+                android:text="Son : ON" />
+            <Button
+                android:id="@+id/vibrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:onClick="vibrate"
+                android:text="@string/vibrate_on"/>
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/startLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="130dp"
+            android:text="@string/start"
+            android:textSize="30sp" />
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

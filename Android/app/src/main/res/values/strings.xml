@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Brick breaker</string>
+    <string name="score">Score</string>
+    <string name="start">Tap to Start</string>
+    <string name="game_over">Game Over</string>
+    <string name="health">health</string>
+    <string name="pause">Pause</string>
+    <string name="continu">Continue</string>
+    <string name="quit">Quit</string>
+    <string name="vibrate_on">Vibrate : ON</string>
+    <string name="vibrate_off">Vibrate : OFF</string>
+</resources>
